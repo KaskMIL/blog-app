@@ -1,24 +1,75 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Blog-app
 
-Things you may want to cover:
+> Blog-app is a complete functional blog website that shows a list of posts and empower the readers to interact with them by adding comments and likes.
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby on Rails
+- Postgresql
+- SASS
 
-* Configuration
+## Live Demo (coming soon...)
 
-* Database creation
+<!---[Live Demo Link](https://livedemo.com)-->
 
-* Database initialization
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy up and running, fallow these simple steps:
 
-* Deployment instructions
+### Prerequisites
 
-* ...
+- Ruby 3.0.1 or newer
+- Rails 7.0.4 or newer
+- Git
+- NPM
+- PostgresSQL
+- Web browser
+
+### Setup
+
+- git clone git@github.com:KaskMIL/blog-app.git
+- cd blog-app
+
+### Install
+
+- boundle install
+- npm install
+
+### Usage
+
+Execute command
+
+rails server
+Then browse https://localhost:3000
+
+
+## Authors
+
+👤 **Tom Milanesi**
+
+- GitHub: [@TomMilanesi](https://github.com/KaskMIL)
+- Twitter: [@TomMilanesi](https://twitter.com/TomasMilanesi)
+- LinkedIn: [Tomas Milanesi](https://www.linkedin.com/in/tomas-milanesi-3427bb185/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
