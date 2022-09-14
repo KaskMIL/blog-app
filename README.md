@@ -1,24 +1,41 @@
-# README
+# vet-clinic-DB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> vet-clinic-DB is a Data Base that contains all the data about animals, animal's owners, clinic employees and visits of a Vet Clinic. Created with PostgresSQL.
 
-Things you may want to cover:
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+This repository includes files with plain SQL that can be used to recreate a database:
 
-* Configuration
+- Use [schema.sql](./schema.sql) to create all tables.
+- Use [data.sql](./data.sql) to populate tables with sample data.
+- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
-* Database creation
 
-* Database initialization
+## Authors
 
-* How to run the test suite
+👤 **Tom Milanesi**
 
-* Services (job queues, cache servers, search engines, etc.)
+- GitHub: [@TomMilanesi](https://github.com/KaskMIL)
+- Twitter: [@TomMilanesi](https://twitter.com/TomasMilanesi)
+- LinkedIn: [Tomas Milanesi](https://www.linkedin.com/in/tomas-milanesi-3427bb185/)
 
-* Deployment instructions
+## 🤝 Contributing
 
-* ...
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
