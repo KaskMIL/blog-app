@@ -10,3 +10,7 @@ first_post = Post.create(author: first_user, title: 'Hello', text: 'This is my f
 (1..6).each do |i|
   Comment.create(author: first_user, posts: first_post, text: "my comment #{i}")
 end
+
+(1..6).each do |i|
+  Like.create(author: first_user, posts: first_post)
+end
