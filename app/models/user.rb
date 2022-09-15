@@ -6,6 +6,10 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :postCounter, comparison: { greater_than_or_equal_to: 0}
 
+  after_initialize do |user|
+    user.postCounter = 0
+  end
+
   def recent_post
     Post.where(author: self).order(created_at: :desc).first(3)
   end
