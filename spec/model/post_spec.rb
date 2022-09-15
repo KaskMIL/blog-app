@@ -24,4 +24,9 @@ RSpec.describe Post, type: :model do
     subject.likesCounter = nil
     expect(subject).to_not be_valid
   end
+
+  it 'recent_comment should return an array with 5 elements' do
+    expect(subject.recent_comment).to be_kind_of Array
+    expect(subject.recent_comment.length).to be_between(0,5)
+  end
 end

@@ -13,6 +13,8 @@ RSpec.describe User, type: :model do
   it 'postCounter should be equal or greater than 0' do
     subject.postCounter = nil
     expect(subject).to_not be_valid
+    subject.postCounter = -1
+    expect(subject).to_not be_valid
   end
 
   it 'recent_post should return an array with 3 elements' do
