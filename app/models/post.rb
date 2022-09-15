@@ -6,6 +6,7 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :title, length: { maximum: 250 }
   validates :commentsCounter, comparison: { greater_than_or_equal_to: 0 }
+  validates :likesCounter, comparison: { greater_than_or_equal_to: 0 }
 
   after_initialize do |post|
     post.commentsCounter = 0
