@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
-    puts User.find(2).postCounter
+    @users = User.all.order(id: :asc)
   end
 
   def show
