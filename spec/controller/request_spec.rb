@@ -7,5 +7,8 @@ RSpec.describe 'Users', type: :request do
     it 'Success' do
       expect(response).to have_http_status(:ok)
     end
+    it "renders 'index' template" do
+      expect(response).to render_template('index')
+    end
   end
 end
