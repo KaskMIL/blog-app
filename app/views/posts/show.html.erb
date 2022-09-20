@@ -1,8 +1,13 @@
 <h1>Show a complete post by id</h1>
 <article>
-  <h2>Post #x <span>by username</span></h2>
-  <span>Comments: x - Likes: x</span>
+  <h2>Post #<%= @post.id %> <span>by <%= @post.author.name %></span></h2>
+  <span>Comments: <%= @post.commentsCounter %> - Likes: <%= @post.likesCounter %></span>
+  <article>
+    <%= @post.text %>
+  </article>
   <ul>
-    <li>Username: Comment 1</li>
+  <%@comments.each do |comment|%>
+    <li><%= comment.author.name %>: <%= comment.text %></li>
+  <%end%>
   </ul>
 </article>
