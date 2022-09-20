@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Users', type: :request do
+RSpec.describe 'Users', type: :request do
   describe 'Index' do
     before(:example) { get root_path }
 
