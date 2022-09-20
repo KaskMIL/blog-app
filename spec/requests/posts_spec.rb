@@ -26,5 +26,8 @@ RSpec.describe 'Posts', type: :request do
     it 'Should get a success response' do
       expect(response).to have_http_status(:ok)
     end
+    it 'Should render posts#show template' do
+      expect(response).to render_template('show')
+    end
   end
 end
