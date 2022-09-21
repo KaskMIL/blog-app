@@ -1,20 +1,27 @@
-<h1>Show User by ID</h1>
-<section>
-  <div>
-    <img src="https://via.placeholder.com/200" alt="Image placeholder">
-    <div>
-      <h2>User name</h2>
-      <p>Number of posts: x</p>
+<section class='user-profile-container'>
+
+  <article class='user-container'>
+    <img src=<%= @user.photo %> alt="Image placeholder">
+    <div class='user-data'>
+      <h1><%= @user.name %></h1>
+      <p>Posts: <%= @user.postCounter %></p>
     </div>
-  </div>
-  <article>
-    <h3>Bio</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam at autem exercitationem hic est molestias consequatur natus id ducimus animi magni, blanditiis sapiente reprehenderit dicta libero quisquam sit, debitis quis.</p>
   </article>
-  <article>
-    <h3>post #x</h3>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi iusto numquam quibusdam dolore soluta magni architecto error nesciunt nobis similique eum officia laudantium voluptate velit accusamus commodi perferendis, aut dolorum.</p>
-    <span>Comments: x, Likes: x</span>
-  </article>
-  <button>See all posts</button>
+
+  <section class='user-page'>
+    <article class='bio'>
+      <h3>Bio</h3>
+      <p><%= @user.bio %></p>
+    </article>
+
+    <% @last_posts.each do |post|%>
+      <article class='user-post'>
+        <h3><%= post.title %></h3>
+        <p><%= post.text %></p>
+        <span class='counters'>Comments: <%= post.commentsCounter %> - Likes: <%= post.likesCounter %></span>
+      </article>
+    <% end %>
+
+    <a class="posts-btn" href="#">See all posts</a>
+  </section>
 </section>
