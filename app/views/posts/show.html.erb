@@ -1,13 +1,18 @@
-<h1>Show a complete post by id</h1>
-<article>
-  <h2>Post #<%= @post.id %> <span>by <%= @post.author.name %></span></h2>
-  <span>Comments: <%= @post.commentsCounter %> - Likes: <%= @post.likesCounter %></span>
-  <article>
-    <%= @post.text %>
-  </article>
+<section class='user-profile-container'>
+  <section class='post-container'>
+    <div class='post-title'>
+      <h2>Post #<%= @post.id %> <span>by <%= @post.author.name %></span></h2>
+      <p>Comments: <%= @post.commentsCounter %> - Likes: <%= @post.likesCounter %></p>
+    </div>
+    <article class='post-text'>
+      <p><%= @post.text %></p>
+    </article>
+  </section>
+  <section class='comments-container'>
   <ul>
-  <%@comments.each do |comment|%>
-    <li><%= comment.author.name %>: <%= comment.text %></li>
-  <%end%>
+    <%@comments.each do |comment|%>
+      <li><h4><%= comment.author.name %>:</h4> <p><%= comment.text %></p></li>
+    <%end%>
   </ul>
-</article>
+  <section>
+</section>

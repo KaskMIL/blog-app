@@ -3,12 +3,15 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 :root {
-  --bg-pink: #FCBFB7;
+  --bg-pink: #fcbfb7;
 }
 
 body {
@@ -54,7 +57,7 @@ p {
   margin-bottom: 30px;
   border: 1px solid #fd8e80;
   border-radius: 10px;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   padding: 10px;
 
   img {
@@ -69,7 +72,7 @@ p {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
     h2,
     p {
@@ -105,7 +108,7 @@ p {
   .user-page {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -130,25 +133,25 @@ p {
       padding: 10px 0;
       margin-bottom: 20px;
     }
+  }
 
-    .comments {
-      border: 1px solid rgb(206, 206, 206);
-      list-style: none;
-      padding: 7px;
-    
-      li {
+  .comments {
+    border: 1px solid rgb(206, 206, 206);
+    list-style: none;
+    padding: 7px;
+
+    li {
+      margin-bottom: 10px;
+
+      h4 {
+        font-family: 'Roboto Slab', serif;
+        font-weight: 700;
+        font-size: 15px;
         margin-bottom: 10px;
-    
-        h4 {
-          font-family: 'Roboto Slab', serif;
-          font-weight: 700;
-          font-size: 15px;
-          margin-bottom: 10px;
-        }
+      }
 
-        p {
-          font-size: 15px;
-        }
+      p {
+        font-size: 15px;
       }
     }
   }
@@ -157,12 +160,12 @@ p {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-
-    .counters {
-      align-self: end;
-      padding: 7px;
-    }
   }
+}
+
+.counters {
+  align-self: end;
+  padding: 7px;
 }
 
 .posts-btn {
@@ -173,7 +176,7 @@ p {
   padding: 10px;
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .posts-page-btn {
@@ -183,8 +186,68 @@ p {
   border: 1px solid rgb(15, 10, 10);
   color: rgb(15, 10, 10);
   background-color: white;
-  padding: 10px;
+  padding: 1rem;
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.post-container {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.post-title {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: baseline;
+  justify-content: space-between;
+
+  h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 35px;
+
+    span {
+      font-weight: 400;
+      font-size: 15px;
+    }
+  }
+
+  p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+.post-text {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 7px;
+
+    h4 {
+      font-family: 'Roboto Slab', serif;
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
 }
