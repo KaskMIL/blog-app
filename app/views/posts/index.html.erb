@@ -1,22 +1,27 @@
-<h1>Show posts by user</h1>
-<section>
-  <div>
+<section class='user-profile-container'>
+
+  <article class='user-container'>
     <img src=<%= @user.photo %> alt="Image placeholder">
-    <div>
-      <h2><%= @user.name %></h2>
-      <p>Number of posts: <%= @user.postCounter %></p>
+    <div class='user-data'>
+      <h1><%= @user.name %></h1>
+      <p>Posts: <%= @user.postCounter %></p>
     </div>
-  </div>
-  <section>
-<% @posts.each_with_index do |post, index| %>
-    <h3>Post #<%= index + 1 %></h3>
-    <p><%= post.text %></p>
-    <ul>
-    <% post.comments.each do |comment| %>
-      <li><%= comment.author.name %>: <%= comment.text %></li>
+  </article>
+
+  <section class='user-page'>
+    <% @posts.each_with_index do |post, index| %>
+      <article class='user-post'>
+        <h3>Post #<%= index + 1 %></h3>
+        <p><%= post.text %></p>
+        <% if post.commentsCounter > 0%>
+          <ul class='comments'>
+            <% post.comments.each do |comment| %>
+              <li><h4><%= comment.author.name %>:</h4> <p><%= comment.text %></p></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </article>
     <% end %>
-    </ul>
   </section>
-<% end %>
-  <button>pagination</button>
+  <a class="posts-page-btn" href="#">See all posts</a>
 </section>
