@@ -8,11 +8,10 @@
       <p><%= @post.text %></p>
     </article>
   </section>
-  <section class='comments-container'>
-  <ul>
+  
+  <ul class= 'comment-container'>
     <%@comments.each do |comment|%>
       <li><h4><%= comment.author.name %>:</h4> <p><%= comment.text %></p></li>
     <%end%>
   </ul>
-  <section>
 </section>
