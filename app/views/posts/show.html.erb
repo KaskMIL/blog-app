@@ -1,7 +1,7 @@
 <section class='user-profile-container'>
   <section class='post-container'>
     <div class='post-title'>
-      <h2>Post #<%= @post.id %> <span>by <%= @post.author.name %></span></h2>
+      <h2><%= @post.title %> <span>by <%= @post.author.name %></span></h2>
       <p>Comments: <%= @post.commentsCounter %> - Likes: <%= @post.likesCounter %></p>
     </div>
     <article class='post-text'>

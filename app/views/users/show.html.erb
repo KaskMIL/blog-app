@@ -14,9 +14,9 @@
       <p><%= @user.bio %></p>
     </article>
 
-    <% @last_posts.each_with_index do |post, index|%>
+    <% @last_posts.each do |post|%>
       <article class='user-post'>
-        <h3>Post #<%= index + 1 %></h3>
+        <h3><%= post.title %></h3>
         <p><%= post.text %></p>
         <span class='counters'>Comments: <%= post.commentsCounter %> - Likes: <%= post.likesCounter %></span>
       </article>
