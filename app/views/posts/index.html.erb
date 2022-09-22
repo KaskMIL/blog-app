@@ -10,6 +10,7 @@
 
   <section class='user-page'>
     <% @posts.each do |post| %>
+    <a href="/users/<%=@user.id%>/posts/<%=post.id%>">
       <article class='user-post'>
         <h3><%= post.title %></h3>
         <p><%= post.text %></p>
@@ -21,6 +22,7 @@
           </ul>
         <% end %>
       </article>
+      </a>
     <% end %>
   </section>
   <a class="posts-page-btn" href="#">See all posts</a>
