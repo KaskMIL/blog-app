@@ -24,9 +24,11 @@ class PostsController < ApplicationController
     @post.author = @user
 
     if @post.save
+      flash[:success] = 'Post saved successfully!'
       redirect_to user_path(@user.id)
     else
-      render :new, status: :unprocessable_entity
+      flash.now[:error] = 'Please, fill all the fields.'
+      render :new, status: 422
     end
   end
 

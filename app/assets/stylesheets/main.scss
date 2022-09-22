@@ -337,3 +337,21 @@ a {
     }
   }
 }
+
+.alert {
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 10px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: rgb(76, 222, 3);
+}
