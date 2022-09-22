@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @user = current_user
     @post = Post.new
     respond_to do |format|
       format.html { render :new, locals: { post: @post } }
@@ -23,7 +24,7 @@ class PostsController < ApplicationController
     @post.author = @user
 
     if @post.save
-      redirect_to root_path
+      redirect_to user_path(@user.id)
     else
       render :new, status: :unprocessable_entity
     end

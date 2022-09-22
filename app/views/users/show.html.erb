@@ -12,6 +12,7 @@
     <article class='bio'>
       <h3>Bio</h3>
       <p><%= @user.bio %></p>
+      <%= link_to 'New Post', new_user_post_path(@user.id), class: 'create_btn' %>
     </article>
 
     <% @last_posts.each do |post|%>
