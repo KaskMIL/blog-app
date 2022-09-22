@@ -9,4 +9,10 @@ class PostsController < ApplicationController
     @post = @user.posts.find(params[:id])
     @comments = @post.comments
   end
+
+  def new
+  end
+
+  def create
+  end
 end
