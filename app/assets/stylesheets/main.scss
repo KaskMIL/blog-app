@@ -359,3 +359,50 @@ a {
 .back {
   margin-bottom: 20px;
 }
+
+.like {
+  align-self: flex-end;
+
+  input {
+    background-color: transparent;
+    border: 1px solid rgb(65, 70, 61);
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    color: rgb(65, 70, 61);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+  }
+
+  input:hover {
+    background-color: rgb(65, 70, 61);
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.leave-comment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .comment-area {
+    textarea {
+      width: 400px;
+      height: 100px;
+      font-family: Arial, sans-serif;
+    }
+  }
+
+  .send-comment {
+    input {
+      font-family: 'Roboto Slab', serif;
+      font-weight: 400;
+      color: rgb(65, 70, 61);
+      font-size: 15px;
+      background-color: transparent;
+      border: none;
+      text-decoration: underline;
+      padding: 0;
+    }
+  }
+}
