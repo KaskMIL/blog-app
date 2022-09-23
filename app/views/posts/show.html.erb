@@ -8,6 +8,11 @@
       <p><%= @post.text %></p>
     </article>
   </section>
+
+  <%= form_with url: user_post_comments_path(@user, @post), scope: :comment do |form|%>
+    <%= form.text_area :text, placeholder: 'Leave a comment!', class: 'comment-area' %>
+    <%= form.submit %>
+  <% end %>
   
   <ul class= 'comment-container'>
     <%@comments.each do |comment|%>
