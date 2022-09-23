@@ -1,0 +1,16 @@
+<%= form_with model: @post, url: user_posts_path, class: 'form-container' do |form| %>
+  <div class='input-container'>
+    <%= form.label :title, class: 'label' %>
+    <%= form.text_field :title, class: 'title-text' %>
+  </div>
+
+  <div class='input-container'>
+    <%= form.label :Post, class: 'label' %>
+    <%= form.text_area :text, class: 'text-area' %>
+  </div>
+  
+  <div class='sub-btn'>
+    <%= link_to 'Cancel', user_path(@user.id), class: 'cancel' %>
+    <%= form.submit %>
+  </div>
+<% end %>

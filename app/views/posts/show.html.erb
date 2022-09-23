@@ -1,17 +1,41 @@
 <section class='user-profile-container'>
+
+<%= link_to '< Back to Posts', user_posts_path(@user), class: 'create_btn back'%>
+
   <section class='post-container'>
+
     <div class='post-title'>
       <h2><%= @post.title %> <span>by <%= @post.author.name %></span></h2>
       <p>Comments: <%= @post.commentsCounter %> - Likes: <%= @post.likesCounter %></p>
     </div>
+
     <article class='post-text'>
       <p><%= @post.text %></p>
     </article>
+
   </section>
+
+  <%= form_with url: user_post_likes_path(@user, @post), scope: :like, class: 'like' do |form|%>
+  <%= form.submit 'Like' %>
+  <% end %>
+
+  <%= form_with url: user_post_comments_path(@user, @post), scope: :comment, class: 'leave-comment-container' do |form|%>
+    <div class='comment-area'>
+      <%= form.text_area :text, placeholder: 'Leave a comment!' %>
+    </div>
+    <div class='send-comment'>
+      <%= form.submit 'Send'%>
+    </div>
+  <% end %>
   
   <ul class= 'comment-container'>
+
     <%@comments.each do |comment|%>
-      <li><h4><%= comment.author.name %>:</h4> <p><%= comment.text %></p></li>
+
+      <li>
+         <h4><%= comment.author.name %>:</h4> <p><%= comment.text %></p>
+      </li>
+
     <%end%>
   </ul>
 </section>

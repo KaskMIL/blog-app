@@ -33,6 +33,11 @@ p {
   margin: 0;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 // Users#index style
 
 .title {
@@ -101,7 +106,7 @@ p {
 .user-container {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border: 1px solid #fd8e80;
   border-radius: 10px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -118,7 +123,8 @@ p {
     width: 100%;
     padding: 30px;
     display: flex;
-    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
     h2,
@@ -144,12 +150,22 @@ p {
   padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
+  min-width: 700px;
 
   h1 {
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
     font-size: 40px;
     margin: 0;
+  }
+
+  .bio {
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    p {
+      margin-bottom: 15px;
+    }
   }
 
   .user-page {
@@ -159,6 +175,13 @@ p {
     padding: 10px;
     display: flex;
     flex-direction: column;
+
+    h4 {
+      font-family: 'Roboto Slab', serif;
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
 
     h3 {
       font-family: 'Roboto Slab', serif;
@@ -176,29 +199,17 @@ p {
       border-radius: 10px;
     }
 
-    .bio {
-      padding: 10px 0;
-      margin-bottom: 20px;
-    }
-  }
+    .comments {
+      border: 1px solid rgb(206, 206, 206);
+      list-style: none;
+      padding: 7px;
 
-  .comments {
-    border: 1px solid rgb(206, 206, 206);
-    list-style: none;
-    padding: 7px;
-
-    li {
-      margin-bottom: 10px;
-
-      h4 {
-        font-family: 'Roboto Slab', serif;
-        font-weight: 700;
-        font-size: 15px;
+      li {
         margin-bottom: 10px;
-      }
 
-      p {
-        font-size: 15px;
+        p {
+          font-size: 15px;
+        }
       }
     }
   }
@@ -208,6 +219,11 @@ p {
     flex-direction: column;
     margin-bottom: 20px;
   }
+}
+
+.create_btn {
+  color: blue;
+  text-decoration: underline;
 }
 
 .counters {
@@ -250,4 +266,143 @@ p {
   font-size: 20px;
   font-weight: 300;
   padding: 5px;
+}
+
+.new-container {
+  padding-top: 40px;
+
+  h1,
+  .label {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 40px;
+  }
+}
+
+.like {
+  align-self: flex-end;
+
+  input {
+    background-color: transparent;
+    border: 1px solid rgb(65, 70, 61);
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    color: rgb(65, 70, 61);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+  }
+
+  input:hover {
+    background-color: rgb(65, 70, 61);
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.form-container {
+  background-color: white;
+  min-width: 600px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .label {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .title-text {
+      border: none;
+      border-bottom: 1px solid rgb(206, 206, 206);
+    }
+
+    .text-area {
+      width: 500px;
+      height: 200px;
+      border: 1px solid rgb(206, 206, 206);
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+
+  .sub-btn,
+  .cancel {
+    input,
+    .cancel {
+      background-color: white;
+      border: 1px solid rgb(206, 206, 206);
+      padding: 10px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      font-size: 15px;
+    }
+
+    :hover {
+      cursor: pointer;
+      border: 1px solid black;
+      text-decoration: underline;
+      font-weight: 400;
+    }
+  }
+}
+
+.alert {
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 10px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: rgb(76, 222, 3);
+}
+
+.back {
+  margin-bottom: 20px;
+}
+
+.leave-comment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .comment-area {
+    textarea {
+      width: 400px;
+      height: 100px;
+      font-family: Arial, sans-serif;
+    }
+  }
+
+  .send-comment {
+    input {
+      font-family: 'Roboto Slab', serif;
+      font-weight: 400;
+      color: rgb(65, 70, 61);
+      font-size: 15px;
+      background-color: transparent;
+      border: none;
+      text-decoration: underline;
+      padding: 0;
+    }
+  }
 }
