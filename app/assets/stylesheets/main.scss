@@ -106,7 +106,7 @@ a {
 .user-container {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border: 1px solid #fd8e80;
   border-radius: 10px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -354,4 +354,8 @@ a {
 
 .success {
   color: rgb(76, 222, 3);
+}
+
+.back {
+  margin-bottom: 20px;
 }

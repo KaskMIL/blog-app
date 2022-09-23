@@ -8,6 +8,8 @@
     </div>
   </article>
 
+  <%= link_to '< Back to Profile', user_path(@user), class: 'create_btn back' %>
+
   <section class='user-page'>
     <% @posts.each do |post| %>
     <a href="/users/<%=@user.id%>/posts/<%=post.id%>">
@@ -25,5 +27,4 @@
       </a>
     <% end %>
   </section>
-  <a class="posts-page-btn" href="/users/<%=@user.id%>">Return to Profile</a>
 </section>
