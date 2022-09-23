@@ -159,6 +159,15 @@ a {
     margin: 0;
   }
 
+  .bio {
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
   .user-page {
     background-color: white;
     border-radius: 10px;
@@ -166,6 +175,13 @@ a {
     padding: 10px;
     display: flex;
     flex-direction: column;
+
+    h4 {
+      font-family: 'Roboto Slab', serif;
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
 
     h3 {
       font-family: 'Roboto Slab', serif;
@@ -183,33 +199,17 @@ a {
       border-radius: 10px;
     }
 
-    .bio {
-      padding: 10px 0;
-      margin-bottom: 20px;
+    .comments {
+      border: 1px solid rgb(206, 206, 206);
+      list-style: none;
+      padding: 7px;
 
-      p {
-        margin-bottom: 15px;
-      }
-    }
-  }
-
-  .comments {
-    border: 1px solid rgb(206, 206, 206);
-    list-style: none;
-    padding: 7px;
-
-    li {
-      margin-bottom: 10px;
-
-      h4 {
-        font-family: 'Roboto Slab', serif;
-        font-weight: 700;
-        font-size: 15px;
+      li {
         margin-bottom: 10px;
-      }
 
-      p {
-        font-size: 15px;
+        p {
+          font-size: 15px;
+        }
       }
     }
   }
@@ -281,6 +281,26 @@ a {
   }
 }
 
+.like {
+  align-self: flex-end;
+
+  input {
+    background-color: transparent;
+    border: 1px solid rgb(65, 70, 61);
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    color: rgb(65, 70, 61);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+  }
+
+  input:hover {
+    background-color: rgb(65, 70, 61);
+    color: white;
+    cursor: pointer;
+  }
+}
+
 .form-container {
   background-color: white;
   min-width: 600px;
@@ -312,7 +332,7 @@ a {
       width: 500px;
       height: 200px;
       border: 1px solid rgb(206, 206, 206);
-      font-family: 'Roboto' sans-serif;
+      font-family: 'Roboto', sans-serif;
     }
   }
 
@@ -358,26 +378,6 @@ a {
 
 .back {
   margin-bottom: 20px;
-}
-
-.like {
-  align-self: flex-end;
-
-  input {
-    background-color: transparent;
-    border: 1px solid rgb(65, 70, 61);
-    font-family: 'Roboto Slab', serif;
-    font-weight: 400;
-    color: rgb(65, 70, 61);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    font-size: 15px;
-  }
-
-  input:hover {
-    background-color: rgb(65, 70, 61);
-    color: white;
-    cursor: pointer;
-  }
 }
 
 .leave-comment-container {
