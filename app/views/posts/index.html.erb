@@ -19,7 +19,9 @@
         <% if post.commentsCounter > 0%>
           <ul class='comments'>
             <% @comments.each do |comment| %>
-              <li><h4><%= comment.author.name %>:</h4> <p><%= comment.text %></p></li>
+              <% if comment.posts_id == post.id %>
+                <li><h4><%= comment.author.name %>:</h4> <p><%= comment.text %></p></li>
+              <% end %>
             <% end %>
           </ul>
         <% end %>
