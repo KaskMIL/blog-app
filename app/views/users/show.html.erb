@@ -16,7 +16,7 @@
     </article>
 
     <% @last_posts.each do |post|%>
-      <%= link_to user_post_path(@user.id, post.id) do %>
+      <%= link_to user_post_path(@user.id, post.id), id: post.id do %>
         <article class='user-post'>
           <h3><%= post.title %></h3>
           <p><%= post.text %></p>
@@ -25,6 +25,6 @@
       <% end %>
     <% end %>
 
-    <%= link_to 'See all posts', user_posts_path(@user.id), class: 'posts-btn' %>
+    <button class= 'posts-btn'> <%= link_to 'See all posts', user_posts_path(@user.id), id: 'all-posts' %> </button>
   </section>
 </section>

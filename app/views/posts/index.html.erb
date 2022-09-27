@@ -12,14 +12,16 @@
 
   <section class='user-page'>
     <% @posts.each do |post| %>
-    <a href="/users/<%=@user.id%>/posts/<%=post.id%>">
+    <a id="<%= post.id %>" href="/users/<%=@user.id%>/posts/<%=post.id%>">
       <article class='user-post'>
-        <h3><%= post.title %></h3>
+        <h3><%= post.title %>  <span class='mini'>Likes:<%= post.likesCounter %></span></h3>
         <p><%= post.text %></p>
         <% if post.commentsCounter > 0%>
           <ul class='comments'>
-            <% post.comments.each do |comment| %>
-              <li><h4><%= comment.author.name %>:</h4> <p><%= comment.text %></p></li>
+            <% @comments.each do |comment| %>
+              <% if comment.posts_id == post.id %>
+                <li><h4><%= comment.author.name %>:</h4> <p><%= comment.text %></p></li>
+              <% end %>
             <% end %>
           </ul>
         <% end %>
