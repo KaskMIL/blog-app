@@ -36,5 +36,26 @@ RSpec.describe 'user_path' do
       visit user_path(@second_user)
       expect(page).to have_content(@second_user.postCounter)
     end
+
+    it 'should see users Bio' do
+      visit user_path(@first_user)
+      expect(page).to have_content('Bio')
+    end
+    it 'should see users Bio' do
+      visit user_path(@second_user)
+      expect(page).to have_content('Bio')
+    end
+
+    it 'should see the user first three posts' do
+      visit user_path(@first_user)
+      expect(page).to have_content('Test post 1')
+      expect(page).to have_content('Test post 2')
+      expect(page).to have_content('Test post 3')
+    end
+
+    it 'should see a button to see all posts' do
+      visit visit user_path(@first_user)
+      expect(page).to have_button('See all posts')
+    end
   end
 end
