@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
+  before(:each) do
+    @user = User.create(name: 'Tom')
+  end
+
   describe 'Index' do
     before(:example) { get root_path }
 
@@ -16,7 +20,7 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'Show' do
-    before(:example) { get '/users/1' }
+    before(:example) { get user_path(@user) }
 
     it 'Should get a success response' do
       expect(response).to have_http_status(:ok)
