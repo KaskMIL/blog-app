@@ -16,7 +16,7 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to render_template('index')
     end
     it 'response body should contain a h1 tag' do
-      expect(response.body).to include('<h1>Show posts by user</h1>')
+      expect(response.body).to include("<h1>#{@user.name}</h1>")
     end
   end
 
@@ -33,7 +33,7 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to render_template('show')
     end
     it 'response body should contain a h1 tag' do
-      expect(response.body).to include('<h1>Show a complete post by id</h1>')
+      expect(response.body).to include("<h2>Test post <span>by #{@user.name}</span></h2>")
     end
   end
 end
