@@ -54,8 +54,14 @@ RSpec.describe 'user_path' do
     end
 
     it 'should see a button to see all posts' do
-      visit visit user_path(@first_user)
+      visit user_path(@first_user)
       expect(page).to have_button('See all posts')
+    end
+
+    it 'should redirect to the posts#index page when click see all buttons' do
+      visit user_path(@first_user)
+      find('a[id= all-posts]').click
+      expect(current_path).to eq(user_posts_path(@first_user))
     end
   end
 end
