@@ -5,17 +5,19 @@ class CommentsController < ApplicationController
     @comment.author = current_user
     @comment.posts = @post
 
-    respond_to do |format|
-      format.html do
-        if @comment.save
-          flash[:success] = 'Comment created!'
-          redirect_to user_post_path(current_user, @post)
-        else
-          redirect_to user_post_path(current_user, @post)
-          flash[:error] = 'You need to write a comment before send it!'
-        end
-      end
+    if @comment.save
+      flash[:success] = 'Comment created!'
+    else
+      flash[:error] = 'You need to write a comment before send it!'
     end
+    redirect_to user_post_path(params[:user_id], params[:post_id])
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+
+    redirect_to user_path(params[:user_id])
   end
 
   private

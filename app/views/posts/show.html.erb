@@ -15,6 +15,10 @@
 
   </section>
 
+  <% if can? :manage, @post %>
+  <%= button_to 'Delete post', user_post_path(@post.author, @post), method: :delete %>
+  <% end %>
+
   <%= form_with url: user_post_likes_path(@user, @post), scope: :like, class: 'like' do |form|%>
   <%= form.submit 'Like' %>
   <% end %>

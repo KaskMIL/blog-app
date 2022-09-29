@@ -4,6 +4,7 @@ class Post < ApplicationRecord
   has_many :likes, foreign_key: 'posts_id'
 
   after_save :update_counter
+  after_destroy :update_counter
 
   validates :title, presence: true
   validates :title, length: { maximum: 250 }
@@ -17,6 +18,6 @@ class Post < ApplicationRecord
   private
 
   def update_counter
-    author.increment!(:postCounter)
+    author.update(postCounter: author.posts.count)
   end
 end

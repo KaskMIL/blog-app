@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
     @comments = Comment.includes(:author).where(posts_id: params[:id])
   end
@@ -33,6 +33,13 @@ class PostsController < ApplicationController
       flash.now[:error] = 'Please, fill all the fields.'
       render :new, status: 422
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+
+    redirect_to user_path(params[:user_id])
   end
 
   private
