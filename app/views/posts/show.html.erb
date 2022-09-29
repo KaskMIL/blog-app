@@ -15,13 +15,15 @@
 
   </section>
 
+  <div class= 'btn-container'>
   <% if can? :manage, @post %>
-  <%= button_to 'Delete post', user_post_path(@post.author, @post), method: :delete %>
+  <%= button_to 'Delete post', user_post_path(@post.author, @post), method: :delete, class: 'delete-btn' %>
   <% end %>
 
   <%= form_with url: user_post_likes_path(@user, @post), scope: :like, class: 'like' do |form|%>
   <%= form.submit 'Like' %>
   <% end %>
+  </div>
 
   <%= form_with url: user_post_comments_path(@user, @post), scope: :comment, class: 'leave-comment-container' do |form|%>
     <div class='comment-area'>
@@ -37,10 +39,13 @@
     <%@comments.each do |comment|%>
 
       <li>
+        <div class= 'button_to'>
+         <h4><%= comment.author.name %>:</h4>
          <% if can? :manage, comment%>
-         <%= button_to 'Delete comment', user_post_comment_path(@user, @post, comment), method: :delete%>
+         <%= button_to 'Delete comment', user_post_comment_path(@user, @post, comment), method: :delete, class: 'delete-btn' %>
          <% end %>
-         <h4><%= comment.author.name %>:</h4> <p><%= comment.text %></p>
+         </div>
+         <p><%= comment.text %></p>
       </li>
 
     <%end%>
