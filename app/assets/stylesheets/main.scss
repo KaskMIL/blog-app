@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@300;400&display=swap');
+@import url('./_nav.scss');
+@import url('./_sign_up.scss');
 
 html {
   box-sizing: border-box;
@@ -132,7 +134,7 @@ a {
       margin: 0;
       font-family: 'Roboto Slab', serif;
       font-weight: 700;
-      font-size: 40px;
+      font-size: 30px;
     }
 
     p {
@@ -155,7 +157,7 @@ a {
   h1 {
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 30px;
     margin: 0;
   }
 
@@ -409,4 +411,9 @@ a {
 
 .mini {
   font-size: 15px;
+}
+
+.alert,
+.notice {
+  margin-bottom: 1rem;
 }
