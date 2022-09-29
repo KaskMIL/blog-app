@@ -2,7 +2,12 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 1rem;
+  padding: 2rem 4rem;
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 20px;
 
   ul {
     margin: 0;
@@ -12,6 +17,20 @@ nav {
     
     li {
       margin-left: 1rem;
+
+      form {
+        button {
+          background-color: transparent;
+          border: none;
+          font-family: 'Roboto', sans-serif;
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        button:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
