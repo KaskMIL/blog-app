@@ -37,6 +37,9 @@
     <%@comments.each do |comment|%>
 
       <li>
+         <% if can? :manage, comment%>
+         <%= button_to 'Delete comment', user_post_comment_path(@user, @post, comment), method: :delete%>
+         <% end %>
          <h4><%= comment.author.name %>:</h4> <p><%= comment.text %></p>
       </li>
 
