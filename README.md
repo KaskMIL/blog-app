@@ -30,19 +30,19 @@ To get a local copy up and running, fallow these simple steps:
 
 ### Setup
 
-- git clone git@github.com:KaskMIL/blog-app.git
-- cd blog-app
+- `git clone git@github.com:KaskMIL/blog-app.git`
+- `cd blog-app`
 
 ### Install
 
-- boundle install
-- npm install
+- `bundle install`
+- `npm install`
 
 ### Usage
 
 Execute command
 
-rails server
+`rails server`
 Then browse https://localhost:3000
 
 
@@ -53,6 +53,12 @@ Then browse https://localhost:3000
 - GitHub: [@TomMilanesi](https://github.com/KaskMIL)
 - Twitter: [@TomMilanesi](https://twitter.com/TomasMilanesi)
 - LinkedIn: [Tomas Milanesi](https://www.linkedin.com/in/tomas-milanesi-3427bb185/)
+
+👤 **Bandonkeye Arnaud**
+
+- GitHub: [@ArnaudBand](https://github.com/Arnaudband)
+- Twitter: [@Arnaud](https://twitter.com/ba104781)
+- LinkedIn: [Arnaud Bandonkeye](https://www.linkedin.com/in/ArnaudBandonkeye/)
 
 ## 🤝 Contributing
 
