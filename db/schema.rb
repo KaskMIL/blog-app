@@ -46,8 +46,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_28_154349) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.text "photo"
-    t.text "bio"
+    t.text "photo", default: "https://api.lorem.space/image/face?w=150&h=150"
+    t.text "bio", default: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
     t.integer "postCounter", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
