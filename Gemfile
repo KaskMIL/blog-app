@@ -18,8 +18,11 @@ gem 'pg', '~> 1.1'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
-# Devise gem
+# Devise gem for authentication
 gem 'devise'
+
+# cancancan gem for authorization
+gem 'cancancan'
 
 # Open-letter
 gem 'letter_opener', '~> 1.4', '>= 1.4.1'
