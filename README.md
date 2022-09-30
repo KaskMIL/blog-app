@@ -54,6 +54,12 @@ Then browse https://localhost:3000
 - Twitter: [@TomMilanesi](https://twitter.com/TomasMilanesi)
 - LinkedIn: [Tomas Milanesi](https://www.linkedin.com/in/tomas-milanesi-3427bb185/)
 
+👤 **Arnaud Bandonkeye**
+
+- GitHub: [@ArnaudBand](https://github.com/rnaudBand)
+- Twitter: [Arnaud](https://twitter.com/ba104781)
+- LinkedIn: [Arnaud Bandonkeye](https://www.linkedin.com/in/ArnaudBandonkeye)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
