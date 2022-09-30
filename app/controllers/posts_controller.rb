@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource param_method: :post_parameters
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts
@@ -7,7 +9,7 @@ class PostsController < ApplicationController
 
   def show
     @user = User.find(params[:user_id])
-    @post = @user.posts.find(params[:id])
+    @post = Post.find(params[:id])
     @comments = Comment.includes(:author).where(posts_id: params[:id])
   end
 
@@ -31,6 +33,13 @@ class PostsController < ApplicationController
       flash.now[:error] = 'Please, fill all the fields.'
       render :new, status: 422
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+
+    redirect_to user_path(params[:user_id])
   end
 
   private
